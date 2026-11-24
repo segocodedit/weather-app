@@ -10,28 +10,48 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <title>Weather App</title>
   </head>
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city" required />
-          <input type="submit" value="search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="search-form-input"
+          />
+
+          <button type="submit" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <!-- <input type="submit" value="search" class="search-form-button" /> -->
         </form>
       </header>
 
       <main>
-        <div>
-          <h1>Paris</h1>
-          <p>
-            Tuesday 14:49, Scattered clouds
-            <br />
-            Humidity: 66%, Wind: 3.13km/h
-          </p>
-        </div>
+        <div class="weather-data">
+          <div>
+            <h1 class="weather-city">Paris</h1>
+            <p class="weather-details">
+              Tuesday <strong>14:49</strong>, Scattered clouds
+              <br />
+              Humidity: 66%, Wind: <strong>3.13km/h</strong>
+            </p>
+          </div>
 
-        <div>⛅ 24°C</div>
+          <div class="temperature">
+            <div class="weather-icon">⛅</div>
+            <div class="weather-temperature">24</div>
+            <div class="weather-unit">°C</div>
+          </div>
+        </div>
       </main>
 
       <footer>
